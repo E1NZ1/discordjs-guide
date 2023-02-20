@@ -16,8 +16,8 @@ Do you also Want to know discord.js. Watch this guide.
 ---
 # Getting Started
 > OK so Before getting started I want to say what I am going to teach in this guide with you.
-- How to Use Modals, Buttons, SelectMenus, Options, etc.
-- How to make basic commands like ping, help.
+- How to Use Embeds, Buttons.
+- How to make basic commands.
 
 # Handler
 - Ok so you will need an nice handler if you want to code. So for the handler I will give you a nice handler. [So Click me]
@@ -79,3 +79,23 @@ const buttonRow = new ActionRowBuilder().addComponents(button)
 
 await interaction.reply({ content: `Hu`, components: [buttonRow] })
 ```
+Nice. Now you will have to reply to these buttons right.
+# Final Topic - Replying to buttons.
+- Ok so to do this you will see an folder/directory named events.
+  - Create a file and name it something.
+    - Nice so now follow my steps.
+```js
+module.exports = {
+     name: "interactionCreate",
+     run: async (client, interaction) => {
+     if (!interaction.isButton()) return;
+
+	if (interaction.customId === 'Hi') {
+		await interaction.editReply({ content: 'Hi again!', components: [] });
+	}
+    }
+}
+```
+
+That's it for the begginer level.
+Sorry if you didn't understand. I am not very good at teaching
