@@ -62,3 +62,21 @@ const embed = new EmbedBuilder()
 
 await interaction.reply({ embeds: [embed] })
 ```
+# Creating Buttons
+Ok so to create Buttons.
+- Put this at top
+```js
+const { EmbedBuilder,  ButtonStyle,  ButtonBuilder, ActionRowBuilder } = require("discord.js")
+```
+- inside the code
+```js
+const button = new ButtonBuilder()
+.setLabel("hi") // the message to show in button.
+.setCustomId("Hi") // required (Must be different from any customid of every slash command)
+.setStyle(ButtonStyle.Secondary)
+
+const buttonRow = new ActionRowBuilder().addComponents(button)
+
+await interaction.reply({ content: `Hu`, components: [buttonRow] })
+```
+```
