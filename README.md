@@ -79,4 +79,3 @@ const buttonRow = new ActionRowBuilder().addComponents(button)
 
 await interaction.reply({ content: `Hu`, components: [buttonRow] })
 ```
-```
