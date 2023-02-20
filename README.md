@@ -20,7 +20,7 @@ Do you also Want to know discord.js. Watch this guide.
 - How to make basic commands.
 
 # Handler
-- Ok so you will need an nice handler if you want to code. So for the handler I will give you a nice handler. [So Click me]
+- Ok so you will need an nice handler if you want to code. So for the handler I will give you a nice handler. [So Click me](https://github.com/E1NZ1/Discord.js-SlashCommand-Handler)
 
 # Creating Basic Commands
 ## How to create One?
