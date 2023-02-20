@@ -26,4 +26,39 @@ Do you also Want to know discord.js. Watch this guide.
 ## How to create One?
 ### Here is an example of creating an command.
 ```js
+module.exports = {
+    name: "example", // the name of the slash Command
+    description: "example command", // description to show below the command name,
+    default_member_permissions: ["SendMessages", "BanMembers"], // the default_member_permissions.
+    run: async (client, interaction) => {
+        // Code
+    }
+}
+```
+- This is a sls command example.
+  - Note: This is for our handler only.
+
+# Replying to Slash Commands
+So you will need to reply to an slash command to make an simple bot right?
+```js
+await interaction.reply(`Hi`)
+```
+Or
+```js
+await interaction.reply({ content: `Hi` })
+```
+# Creating Embeds
+Ok so now let's start with Creating embeds
+- Put this at the top of code
+```js
+const { EmbedBuilder } = require("discord.js")
+```
+- inside the code
+```js
+const embed = new EmbedBuilder()
+.setTitle("Some Title")
+.setDescription("some description")
+.setFooter({ text: `Hi` })
+
+await interaction.reply({ embeds: [embed] })
 ```
